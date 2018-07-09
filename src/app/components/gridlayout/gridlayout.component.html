@@ -1,0 +1,69 @@
+
+    <div class="row">
+      <h2></h2>
+      <h2></h2>
+      <h2></h2>
+      <h2></h2>
+    </div>
+    <div class="container" [style.backgroundColor]="'grey'" >
+      <!-- Control the column width, and how they should appear on different devices -->
+      <div class="row" >
+        <div class="col-sm-6"  >
+            <mat-card >
+               <mat-card-content>
+                 <!-- <h6>Overall Status | Total:300 | OLS:200 | callcenter:100</h6> -->
+                 
+          <app-opp-ver-bar-overall [olsOpp]=olsOpp [ccOpp]=ccOpp [totalOpp]=totalOpp ></app-opp-ver-bar-overall>
+        </mat-card-content>       
+        </mat-card >
+              
+        </div>
+        <div class="col-sm-6" >
+            <mat-card >
+                <mat-card-content>
+                    
+                    <app-ols-piechart [olsOpp]=olsOpp [olsInProgress]=olsInProgress [olsNew]=olsNew></app-ols-piechart>
+                  </mat-card-content>       
+                </mat-card >
+         
+        </div>
+      </div>
+      <br>
+     
+      
+      
+    </div>
+   
+    <div class="container" [style.backgroundColor]="'grey'">
+        <!-- Control the column width, and how they should appear on different devices -->
+        <div class="row">
+          <div class="col-sm-6" >
+              <mat-card >
+                 <mat-card-content>
+                    <!-- <h6>CallCenter Opp| Total:300 | OLS:200 | callcenter:100</h6> -->
+            <app-ccpiechart [ccOpp]=ccOpp [ccInProgress]=ccInProgress [ccNew]=ccNew></app-ccpiechart>
+          </mat-card-content>       
+          </mat-card >
+                
+          </div>
+          <div class="col-sm-6" >
+              <mat-card >
+                  <mat-card-content>
+                      <app-dailyoppstatus [dailyTotal]=dailyTotal [dailyNew]=dailyNew [dailyClosed]=dailyClosed [dailyInProgress]=dailyInProgress></app-dailyoppstatus>
+                    </mat-card-content>       
+                  </mat-card >
+           
+          </div>
+        </div>
+        <br>
+       
+        
+        
+      </div>
+
+      <div class="ticker-wrap body">
+          <div class="ticker">
+            <div class="ticker__item">Today's Opportunities | Total Opp : {{totalOpp}} Closed Opp: {{dailyClosed}} | OLS Opp: {{olsOpp}} In Progress :  {{olsInProgress}} New : {{olsNew}} | Call Center Opp : {{ccOpp}} In Progress : {{ccInProgress}} New : {{ccNew}}</div>
+            
+          </div>
+          </div>

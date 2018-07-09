@@ -1,0 +1,9 @@
+<h6>OLS Opp| Total:{{olsOpp}} | New:{{olsNew}} | In-Progress:{{olsInProgress}}</h6>
+<div style="display: block">
+    <canvas baseChart
+            [data]="olspieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>

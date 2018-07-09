@@ -1,0 +1,9 @@
+<h6>Daily Opp| Total:{{dailyTotal}} | Closed: {{dailyClosed}} | New:{{dailyNew}} | In-Progress:{{dailyInProgress}}</h6>
+<div style="display: block" >
+    <canvas baseChart
+            [data]="dailyChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>

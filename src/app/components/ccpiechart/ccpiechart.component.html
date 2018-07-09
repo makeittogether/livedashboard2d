@@ -1,0 +1,9 @@
+<h6>Call Center Opp| Total:{{ccOpp}} | New:{{ccNew}} | In-Progress:{{ccInProgress}}</h6>
+<div style="display: block">
+    <canvas baseChart
+            [data]="ccpieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
